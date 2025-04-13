@@ -10,7 +10,7 @@ on:
     branches: ["main"]
 
 jobs:
-  test:
+  build:
     name: Test
     runs-on: ubuntu-latest
     steps:
