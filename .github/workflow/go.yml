@@ -13,14 +13,14 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+
     services:
       postgres:
-        image: postgres
+        image: postgres@latest
         env:
           POSTGRES_USER: root
           POSTGRES_PASSWORD: secret
           POSTGRES_DB: simple_bank
-        # Set health checks to wait until postgres has started
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
